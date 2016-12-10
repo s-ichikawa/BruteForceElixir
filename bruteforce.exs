@@ -5,14 +5,17 @@ defmodule BruteForce do
 
   defp lower_chars do
     a = 97
-    z = a + 25
+    z = 26
     to_string [span(a, z)]
   end
 
-  defp span([], 0) do
+  defp span(head, 0) do
     []
   end
   defp span(head, target_loc) do
-    [ head | span(head + 1, target_loc - head)]
+    IO.puts head
+    IO.puts target_loc
+    [ head | span(head + 1, target_loc - 1)]
   end
+
 end
