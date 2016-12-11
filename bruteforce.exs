@@ -8,6 +8,12 @@ defmodule BruteForce do
     z = 26
     to_string [span(a, z)]
   end
+  
+  defp upper_chars do
+    a = 1
+    z = 26
+    to_string [span(a, z)]
+  end
 
   defp span(head, 0) do
     []
