@@ -1,8 +1,7 @@
 defmodule BruteForce do
   def run do
-    chars = lower_chars
-    read(chars, String.length(chars))
-#    upper_chars
+    Enum.map(String.graphemes(lower_chars), &IO.puts(&1))
+    Enum.map(String.graphemes(upper_chars), &IO.puts(&1))
   end
 
   defp lower_chars do
@@ -24,13 +23,5 @@ defmodule BruteForce do
     [ head | span(head + 1, target_loc - 1)]
   end
 
-  defp read(str, 0) do
-    IO.puts str
-  end
 
-  defp read(str, length) do
-    IO.puts String.first str
-    chars = String.slice(str, 1, String.length(str) - 1)
-    read(chars, String.length(chars))
-  end
 end
