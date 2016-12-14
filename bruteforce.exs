@@ -1,7 +1,7 @@
 defmodule BruteForce do
   def run do
     Enum.map(String.graphemes(lower_chars), &IO.puts(&1))
-    Enum.map(String.graphemes(upper_chars), &IO.puts(&1))
+#    Enum.map(String.graphemes(upper_chars), &IO.puts(&1))
   end
 
   defp lower_chars do
