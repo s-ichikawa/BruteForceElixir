@@ -1,5 +1,6 @@
 defmodule BruteForce do
   def run do
+    password = 'si'
     Enum.map(lower_chars, &IO.puts(&1))
     Enum.map(upper_chars, &IO.puts(&1))
     Enum.map(lower_chars, &multi(lower_chars, &1))
@@ -31,4 +32,5 @@ defmodule BruteForce do
     end)
   end
 
+  
 end
